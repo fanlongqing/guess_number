@@ -18,6 +18,7 @@ public class GameControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+
     @Test
     public void should_return_when_guess_number() throws Exception{
         this.mockMvc.perform(MockMvcRequestBuilders.post("/games/guess-numbers")
