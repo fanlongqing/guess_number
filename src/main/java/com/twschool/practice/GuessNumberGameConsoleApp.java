@@ -14,7 +14,6 @@ public class GuessNumberGameConsoleApp {
         while (guessNumberGame.getStatus() == GameStatus.CONTINUED) {
             Scanner scanner = new Scanner(System.in);
             String userInput = scanner.nextLine();
-            
             String result = guessNumberGame.guess(userInput);
             
             System.out.println(String.format("guess result: %s", result));

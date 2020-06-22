@@ -5,15 +5,17 @@ import com.twschool.practice.domain.GameStatus;
 import com.twschool.practice.domain.GuessNumberGame;
 import com.twschool.practice.domain.User;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class GameService {
     private GuessNumberGame guessNumberGame;
     private User user;
 
     public GameService(GuessNumberGame guessNumberGame) {
         this.guessNumberGame = guessNumberGame;
+    }
+
+    public GameService(User user) {
+        this.user = user;
+        this.guessNumberGame = user.getGuessNumberGame();
     }
 
     public String  guess(String userAnswerString) {
